@@ -1,6 +1,6 @@
 PROJET XML – Système de gestion académique
 
-Étudiant : [Ton nom]
+Étudiant :Youssouph Aidara
 Promo : MICDA P8
 Matière : XML
 
