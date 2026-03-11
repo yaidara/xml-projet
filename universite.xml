@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="universite.xsl"?>
+<universite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="universite.xsd"
+            nom="UNCHK">
+
+    <enseignants>
+        <enseignant id="ENS001">
+            <nom>Loshima</nom>
+            <prenom>Junior</prenom>
+            <departement>Informatique</departement>
+        </enseignant>
+
+        <enseignant id="ENS002">
+            <nom>Diallo</nom>
+            <prenom>Fatou</prenom>
+            <departement>Mathématiques</departement>
+        </enseignant>
+    </enseignants>
+
+    <cours>
+        <cour code="INF101">
+            <intitule>Introduction au XML</intitule>
+            <credits>3</credits>
+            <enseignantResponsable ref="ENS001"/>
+        </cour>
+
+        <cour code="INF102">
+            <intitule>Base de données</intitule>
+            <credits>4</credits>
+            <enseignantResponsable ref="ENS001"/>
+        </cour>
+
+        <cour code="MAT201">
+            <intitule>Algèbre linéaire</intitule>
+            <credits>3</credits>
+            <enseignantResponsable ref="ENS002"/>
+        </cour>
+    </cours>
+
+    <etudiants>
+        <etudiant id="ETU001">
+            <nom>Ndiaye</nom>
+            <prenom>Moussa</prenom>
+            <dateNaissance>2002-03-15</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>14.5</note>
+                </inscription>
+                <inscription courRef="MAT201">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>12.0</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU002">
+            <nom>Sow</nom>
+            <prenom>Aminata</prenom>
+            <dateNaissance>2001-07-22</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>17.0</note>
+                </inscription>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>15.5</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU003">
+            <nom>Diop</nom>
+            <prenom>Ibrahima</prenom>
+            <dateNaissance>2003-01-01</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>11.5</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+                <etudiant id="ETU004">
+            <nom>Fall</nom>
+            <prenom>Awa</prenom>
+            <dateNaissance>2002-09-12</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>13.5</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU005">
+            <nom>Ba</nom>
+            <prenom>Omar</prenom>
+            <dateNaissance>2001-04-20</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="MAT201">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>10.5</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU006">
+            <nom>Sy</nom>
+            <prenom>Khady</prenom>
+            <dateNaissance>2002-11-03</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>16.2</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU007">
+            <nom>Gueye</nom>
+            <prenom>Mamadou</prenom>
+            <dateNaissance>2000-06-18</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>18.0</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU008">
+            <nom>Ndour</nom>
+            <prenom>Seynabou</prenom>
+            <dateNaissance>2001-12-01</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="MAT201">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>9.5</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU009">
+            <nom>Camara</nom>
+            <prenom>Ibra</prenom>
+            <dateNaissance>2002-02-25</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>14.8</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU010">
+            <nom>Kane</nom>
+            <prenom>Fatimata</prenom>
+            <dateNaissance>2003-05-10</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>12.7</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU011">
+            <nom>Sarr</nom>
+            <prenom>Alioune</prenom>
+            <dateNaissance>2002-08-14</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="MAT201">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>15.3</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU012">
+            <nom>Diatta</nom>
+            <prenom>Marie</prenom>
+            <dateNaissance>2001-03-29</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>17.4</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU013">
+            <nom>Balde</nom>
+            <prenom>Amadou</prenom>
+            <dateNaissance>2000-10-11</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>11.0</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU014">
+            <nom>Seck</nom>
+            <prenom>Rokhaya</prenom>
+            <dateNaissance>2002-07-07</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>13.9</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU015">
+            <nom>Diagne</nom>
+            <prenom>Cheikh</prenom>
+            <dateNaissance>2001-01-16</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="MAT201">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>14.1</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU016">
+            <nom>Barry</nom>
+            <prenom>Abdou</prenom>
+            <dateNaissance>2003-09-02</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF101">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>19.0</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU017">
+            <nom>Faye</nom>
+            <prenom>Coumba</prenom>
+            <dateNaissance>2002-04-04</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="INF102">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>10.2</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+
+        <etudiant id="ETU018">
+            <nom>Mbaye</nom>
+            <prenom>Serigne</prenom>
+            <dateNaissance>2001-06-30</dateNaissance>
+            <programme>MICDA</programme>
+            <inscriptions>
+                <inscription courRef="MAT201">
+                    <anneeAcademique>2024-2025</anneeAcademique>
+                    <note>15.9</note>
+                </inscription>
+            </inscriptions>
+        </etudiant>
+    </etudiants>
+
+</universite>

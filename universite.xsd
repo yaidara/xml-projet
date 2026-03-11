@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="universite">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="enseignants">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="enseignant" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nom" type="xs:string"/>
+                                        <xs:element name="prenom" type="xs:string"/>
+                                        <xs:element name="departement" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="cours">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cour" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="intitule" type="xs:string"/>
+                                        <xs:element name="credits" type="xs:positiveInteger"/>
+                                        <xs:element name="enseignantResponsable">
+                                            <xs:complexType>
+                                                <xs:attribute name="ref" type="xs:IDREF" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="code" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="etudiants">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="etudiant" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nom" type="xs:string"/>
+                                        <xs:element name="prenom" type="xs:string"/>
+                                        <xs:element name="dateNaissance" type="xs:date"/>
+                                        <xs:element name="programme" type="xs:string"/>
+                                        <xs:element name="inscriptions">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="inscription" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="anneeAcademique" type="xs:string"/>
+                                                                <xs:element name="note">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:decimal">
+                                                                            <xs:minInclusive value="0"/>
+                                                                            <xs:maxInclusive value="20"/>
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="courRef" type="xs:IDREF" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+            <xs:attribute name="nom" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
